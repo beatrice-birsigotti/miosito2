@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birsigotti_Beatrice_figma</title>
+  <link rel="stylesheet" href="css/bootstrap-grid.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- collego i font-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container-fluid">
+<!-- header-->
+        <div class="row  mb-4 pt-4 align-items-center margin bg-red">
+            <div class="col-6 col-lg-2">
+                <p class="logo"> BB</p>
+            </div>
+            <div class="col-lg-4 offset-md-6 align-items-center d-none d-lg-block ">
+                <ul class="nav-list">
+                      <li class="nav-item">
+                          <a href="#" class="nav-link selected">Chi sono</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="#" class="nav-link"> Origini</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="#" class="nav-link">About me</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="#" class="nav-link">Progetti</a>
+                      </li>
+                </ul>
+            </div>
+           <div class="col-6 col-lg-1 d-flex d-lg-none justify-content-end align-items-center">
+              <button class="btn btn-menu">Menù</button>
+              <!-- <button class="btn btn-menu d-block d-lg-none">Menu</button> -->
+            </div>
+        </div>
+
+        <div class="mobile-nav-wrapper d-lg-none">
+              <button class="btn btn-close mb-3">Close</button> 
+                 <ul class="nav-list">
+                      <li class="nav-item">
+                          <a href="#" class="nav-link">Chi sono</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="#" class="nav-link selected">Origini</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="#" class="nav-link">About me</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="#" class="nav-link">Progetti</a>
+                      </li>
+                </ul> 
+        </div>
+    </div>
+</div>
+<!-- prima riga-->
+        <div class="row">
+            <div class="col-12 col-md-6 bg-titolo ">
+                <h1 class=" text-center color-white"> BIRSIGOTTI BEATRICE </h1>
+                <h3 class="text-center color-white"> Portfolio personale</h3>
+            </div>
+</div>
+
+<!-- seconda riga -->
+<div class="row align-items-center">
+    <div class="col-md-6 mb-0 gx-3">
+        <img src="img/foto personale 3.jpg" class="img-fluid" alt="foto personale">
+    </div>
+    <div class="col-md-4 offset-md-1 mb-3">
+        <h2> CHI SONO </h2>
+    <p class="font-1"> Mi chiamo Beatrice Birsigotti, ho 20 anni e sono originaria di Pesaro. </p>
+    </div>
+</div>
+
+<!-- terza riga -->
+<div class="row align-items-center">
+      <div class="col-md-4 offset-md-1 mb-3">
+        <h2> ORIGINI </h2>
+    <p class="font-1"> Pesaro offre un paesaggio di contrasti morbidi: da un lato l'Adriatico con la sua linea orizzontale infinita, spiagge ampie e il ritmo costante delle onde; dall'altro le colline marchigiane che si sollevano dolcemente verso l'entroterra, creando un dialogo tra mare e terra. </p>
+    </div>
+    <div class="col-md-6 offset-md-1 mb-0 gx-3">    
+        <img src="img/pesaro.jpeg" class="img-fluid" alt="foto pesaro">
+    </div>
+</div>
+
+<!--quarta riga-->
+        <div class="row my-5">
+            <div class="col-8  bg-monumenti">
+                <h4 class=" text-center color-black"> MONUMENTI PESARESI </h4>
+            </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+    <!-- qui si inserisce il codice JavaScript -->
+<script>
+    // Seleziona gli elementi
+const btnMenu = document.querySelector('.btn-menu');
+const btnClose = document.querySelector('.btn-close');
+const mobileNavWrapper = document.querySelector('.mobile-nav-wrapper');
+
+// Aggiungi la classe .show quando si clicca su .btn-menu
+btnMenu.addEventListener('click', () => {
+  mobileNavWrapper.classList.add('show');
+});
+
+// Rimuovi la classe .show quando si clicca su .btn-close
+btnClose.addEventListener('click', () => {
+  mobileNavWrapper.classList.remove('show');
+});
+
+// Rimuovi la classe .show quando si clicca su .mobile-nav-wrapper (ma non sui link)
+mobileNavWrapper.addEventListener('click', (e) => {
+  // Controlla se il click è stato fatto direttamente sul wrapper e non su un link
+  if (e.target === mobileNavWrapper) {
+    mobileNavWrapper.classList.remove('show');
+  }
+});
+</script>
+
+</body>
+</html>
