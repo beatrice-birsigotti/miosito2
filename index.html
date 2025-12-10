@@ -96,8 +96,46 @@
                 <h4 class=" text-center color-black"> MONUMENTI PESARESI </h4>
             </div>
 </div>
+<!-- quinta riga -->
+ <div class="container">
+        <div class="gallery">
+            <div class="card">
+                <img src="img/palla di pomodoro .jpg" alt="Palla di pomodoro" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">Palla di pomodoro</h2>
+                    <p class="card-description">La Sfera Grande di Arnaldo Pomodoro sul lungomare di Pesaro rappresenta un'iniezione di scultura contemporanea nel paesaggio urbano costiero.</p>
+                </div>
+            </div>
 
+            <div class="card">
+                <img src="img/piazza del popolo .jpg" alt="Piazza del popolo" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">Piazza del popolo</h2>
+                    <p class="card-description">Piazza del Popolo è il cuore geometrico di Pesaro, dove il rigore neoclassico si esprime attraverso la simmetria perfetta degli edifici porticati e la razionalità della pianta rettangolare.</p>
+                </div>
+            </div>
 
+            <div class="card">
+                <img src="img/rocca costanza.jpg" alt="Rocca costanza" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">Rocca costanza</h2>
+                    <p class="card-description">La Rocca Costanza è un manifesto di design militare rinascimentale con la sua geometria etta quattrocentesca.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--sesta riga-->
+<div class="carousel">
+        <div class="slides" id="slides">
+            <div class="slide"><img src="img/sanma.jpg" alt="Università"></div>
+            <div class="slide"><img src="img/lavoro.JPG" alt="lavoro"></div>
+            <div class="slide"><img src="img/danza.jpg" alt="sport"></div>
+            <div class="slide"><img src="img/borse.jpg" alt="hobbie"></div>
+        </div>
+        <button class="btn prev" onclick="move(-1)">‹</button>
+        <button class="btn next" onclick="move(1)">›</button>
+    </div>
+<div class="dots" id="dots"></div>
 
 
 
@@ -130,6 +168,41 @@ mobileNavWrapper.addEventListener('click', (e) => {
     mobileNavWrapper.classList.remove('show');
   }
 });
+
+        let current = 0;
+        const slides = document.getElementById('slides');
+        const total = document.querySelectorAll('.slide').length;
+        const dotsDiv = document.getElementById('dots');
+
+        // Crea pallini
+        for (let i = 0; i < total; i++) {
+            const dot = document.createElement('span');
+            dot.className = 'dot' + (i === 0 ? ' active' : '');
+            dot.onclick = () => goTo(i);
+            dotsDiv.appendChild(dot);
+        }
+
+        function update() {
+            slides.style.transform = `translateX(-${current * 100}%)`;
+            document.querySelectorAll('.dot').forEach((d, i) => {
+                d.className = i === current ? 'dot active' : 'dot';
+            });
+        }
+
+        function move(dir) {
+            current += dir;
+            if (current < 0) current = total - 1;
+            if (current >= total) current = 0;
+            update();
+        }
+
+        function goTo(i) {
+            current = i;
+            update();
+        }
+
+        setInterval(() => move(1), 5000);
+  
 </script>
 
 </body>
