@@ -127,16 +127,60 @@
 <!--sesta riga-->
 <div class="carousel">
         <div class="slides" id="slides">
-            <div class="slide"><img src="img/sanma.jpg" alt="Università"></div>
-            <div class="slide"><img src="img/lavoro.JPG" alt="lavoro"></div>
-            <div class="slide"><img src="img/danza.jpg" alt="sport"></div>
-            <div class="slide"><img src="img/borse.jpg" alt="hobbie"></div>
+            <div class="slide">
+                <img src="img/sanma.jpg" alt="Università">
+                <div class="caption">
+                    <h2>UNIRSM San Marino</h2>
+                    <p>Università di design</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="img/lavoro.JPG" alt="Lavoro">
+                <div class="caption">
+                    <h2>Lavoro</h2>
+                    <p>Hostess presso eventi</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="img/danza.jpg" alt="Sport">
+                <div class="caption">
+                    <h2>Sport</h2>
+                    <p>Danza</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="img/borse.jpg" alt="Hobbie">
+                <div class="caption">
+                    <h2>Hobbie</h2>
+                    <p>Borse all'uncinetto</p>
+                </div>
+            </div>
         </div>
-        <button class="btn prev" onclick="move(-1)">‹</button>
-        <button class="btn next" onclick="move(1)">›</button>
+        <button class="btnslide prev" onclick="move(-1)">‹</button>
+        <button class="btnslide next" onclick="move(1)">›</button>
     </div>
-<div class="dots" id="dots"></div>
 
+    <div class="dots" id="dots"></div>
+
+<!--settima riga-->
+<div class="container-fluid">
+        <div class="row my-5">
+            <div class="col-8  bg-progetti">
+                <h4 class=" text-center color-black"> PROGETTI UNIVERSITARI </h4>
+            </div>
+</div>
+
+ <div class="col-12 col-md-6 col-lg-4">
+            <div class="project-card">
+                <img src="img/comunicazione1.jpg" alt="comunicazione1" class="img-fluid">
+                <div class="project-overlay">
+                    <div class="project-text">
+                        <h3>Lab Stroia</h3>
+                        <p>Breve descrizione del progetto e degli obiettivi raggiunti durante il corso.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
@@ -169,7 +213,9 @@ mobileNavWrapper.addEventListener('click', (e) => {
   }
 });
 
-        let current = 0;
+  
+
+  let current = 0;
         const slides = document.getElementById('slides');
         const total = document.querySelectorAll('.slide').length;
         const dotsDiv = document.getElementById('dots');
@@ -202,7 +248,6 @@ mobileNavWrapper.addEventListener('click', (e) => {
         }
 
         setInterval(() => move(1), 5000);
-  
 </script>
 
 </body>

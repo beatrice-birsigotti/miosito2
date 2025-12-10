@@ -77,6 +77,13 @@ position: fixed;
        padding: 80px;
       width: 100%; 
 }
+
+.bg-progetti{
+    background-color: #f5f5f5;
+       padding: 80px;
+      width: 100%;
+}
+
 /*colori testo*/
 .color-white{
     color: #fff; 
@@ -151,20 +158,21 @@ h4{
             margin: 0 auto;
         }
 
-.gallery {
+        .gallery {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             margin-top: 20px;
         }
 
- .card {
+        .card {
             background: transparent;
+            border-radius: 8px;
             overflow: hidden;
             box-shadow: none;
         }
 
-.card-image {
+        .card-image {
             width: 100%;
             height: 250px;
             object-fit: cover;
@@ -172,83 +180,177 @@ h4{
             cursor: pointer;
         }
 
-.card:hover .card-image {
+        .card:hover .card-image {
             transform: scale(1.05);
         }
 
-.card-content {
+        .card-content {
             padding: 20px;
         }
 
-.card-title {
-            font-size: 20px;
+        .card-title {
+            font-size: 18px;
             font-weight: bold;
             margin-bottom: 12px;
-            color: #000;
+            color: #333;
         }
 
-.card-description {
-            font-size: 18px;
+        .card-description {
+            font-size: 14px;
             line-height: 1.6;
-            color: #000;
+            color: #666;
         }
-
-/*sesta riga*/
+/*sesta riga - carousel*/
+/* Stili per il carosello */
 .carousel {
-            max-width: 1400px;
-            position: relative;
-        }
+    max-width: 100%;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
 
-        .slides {
-            display: flex;
-            overflow: hidden;
-        }
+.slides {
+    display: flex;
+}
 
-        .slide {
-            min-width: 100%;
-            transition: transform 0.5s;
-        }
+.slide {
+    min-width: 100%;
+    position: relative;
+    flex-shrink: 0;
+}
 
-        .slide img {
-            width: 100%;
-            height: 800px;
-            object-fit: cover;
-        }
+.slide img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    display: block;
+}
 
-        .btn {
-            position: absolute;
-            top: 50%;
-            background: white;
-            border: none;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            font-size: 24px;
-            cursor: pointer;
-        }
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    padding: 10px;
+    text-align: center;
+}
 
-        .prev { left: 20px; }
-        .next { right: 20px; }
+.caption h2 {
+    font-size: 32px;
+    margin: 0 0 10px 0;
+}
 
-        .dots {
-            text-align: center;
-            margin-top: 20px;
-        }
+.caption p {
+    font-size: 18px;
+    margin: 0;
+}
 
-        .dot {
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #ccc;
-            margin: 0 5px;
-            cursor: pointer;
-        }
+.btnslide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+}
 
-        .dot.active {
-            background: #333;
-        }
+.prev { 
+    left: 20px; 
+}
 
+.next { 
+    right: 20px; 
+}
+
+.dots {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px 0;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #000;
+}
+
+/*settima riga*/
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+    height: 350px;
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.1);
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    padding: 30px;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-text {
+    color: white;
+    text-align: center;
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-text {
+    transform: translateY(0);
+}
+
+.project-text h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.project-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
 
 
 
@@ -346,3 +448,5 @@ cursor: default;
     transform: translateX(0);
     pointer-events: auto;
 }
+
+
