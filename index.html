@@ -15,23 +15,23 @@
 <body>
   <div class="container-fluid">
 <!-- header-->
-        <div class="row  mb-4 pt-4 align-items-center margin bg-red">
+        <div class="row  mb-4 pt-4 align-items-center margin bg-red fixed-header">
             <div class="col-6 col-lg-2">
                 <p class="logo"> BB</p>
             </div>
             <div class="col-lg-4 offset-md-6 align-items-center d-none d-lg-block ">
                 <ul class="nav-list">
                       <li class="nav-item">
-                          <a href="#" class="nav-link selected">Chi sono</a>
+                          <a href="#chi sono" class="nav-link">Chi sono</a>
                       </li>
                       <li class="nav-item">
-                          <a href="#" class="nav-link"> Origini</a>
+                          <a href="#origini" class="nav-link"> Origini</a>
                       </li>
                       <li class="nav-item">
-                          <a href="#" class="nav-link">About me</a>
+                          <a href="#about me" class="nav-link">About me</a>
                       </li>
                       <li class="nav-item">
-                          <a href="#" class="nav-link">Progetti</a>
+                          <a href="#progetti" class="nav-link">Progetti</a>
                       </li>
                 </ul>
             </div>
@@ -45,23 +45,24 @@
               <button class="btn btn-close mb-3">Close</button> 
                  <ul class="nav-list">
                       <li class="nav-item">
-                          <a href="#" class="nav-link">Chi sono</a>
+                          <a href="#chi sono" class="nav-link">Chi sono</a>
                       </li>
                       <li class="nav-item">
-                          <a href="#" class="nav-link selected">Origini</a>
+                          <a href="#origini" class="nav-link">Origini</a>
                       </li>
                       <li class="nav-item">
-                          <a href="#" class="nav-link">About me</a>
+                          <a href="#about me" class="nav-link">About me</a>
                       </li>
                       <li class="nav-item">
-                          <a href="#" class="nav-link">Progetti</a>
+                          <a href="#progetti" class="nav-link">Progetti</a>
                       </li>
                 </ul> 
         </div>
     </div>
 </div>
+
 <!-- prima riga-->
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-12 col-md-6 bg-titolo ">
                 <h1 class=" text-center color-white"> BIRSIGOTTI BEATRICE </h1>
                 <h3 class="text-center color-white"> Portfolio personale</h3>
@@ -69,7 +70,7 @@
 </div>
 
 <!-- seconda riga -->
-<div class="row align-items-center">
+<div class="row align-items-center" id="chi sono">
     <div class="col-md-6 mb-0 gx-3">
         <img src="img/foto personale 3.jpg" class="img-fluid" alt="foto personale">
     </div>
@@ -80,7 +81,7 @@
 </div>
 
 <!-- terza riga -->
-<div class="row align-items-center">
+<div class="row align-items-center" id="origini">
       <div class="col-md-4 offset-md-1 mb-3">
         <h2> ORIGINI </h2>
     <p class="font-1"> Pesaro offre un paesaggio di contrasti morbidi: da un lato l'Adriatico con la sua linea orizzontale infinita, spiagge ampie e il ritmo costante delle onde; dall'altro le colline marchigiane che si sollevano dolcemente verso l'entroterra, creando un dialogo tra mare e terra. </p>
@@ -125,7 +126,7 @@
         </div>
     </div>
 <!--sesta riga-->
-<div class="carousel">
+<div class="carousel" id="about me">
         <div class="slides" id="slides">
             <div class="slide">
                 <img src="img/sanma.jpg" alt="Università">
@@ -161,36 +162,104 @@
     </div>
 
     <div class="dots" id="dots"></div>
-
+    
+    <div class="col-12 mb-5 box-testo text-center">
+<p class="font-1"> Attualmente frequento il secondo anno del corso di laurea in Design presso l'Università degli Studi della Repubblica di San Marino.
+Parallelamente agli studi universitari, svolgo attività lavorativa come hostess presso eventi quali cerimonie nuziali, manifestazioni aziendali e congressi. Nel tempo libero coltivo inoltre diverse passioni personali, tra cui la danza e l'arte dell'uncinetto.</p>
+    </div>
 <!--settima riga-->
 <div class="container-fluid">
         <div class="row my-5">
-            <div class="col-8  bg-progetti">
+            <div class="col-8  bg-progetti" id="progetti">
                 <h4 class=" text-center color-black"> PROGETTI UNIVERSITARI </h4>
             </div>
 </div>
+ <div class="row g-4 mb-5">
 
- <div class="col-12 col-md-6 col-lg-4">
+ <div class=" col-md-6 col-lg-4">
             <div class="project-card">
                 <img src="img/comunicazione1.jpg" alt="comunicazione1" class="img-fluid">
                 <div class="project-overlay">
                     <div class="project-text">
-                        <h3>Lab Stroia</h3>
-                        <p>Breve descrizione del progetto e degli obiettivi raggiunti durante il corso.</p>
+                        <h3>Comunicazione 1</h3>
+                        <h2>Lab storia</h2>
+                        <p>Creazione identità visiva di un HUB culturale che si trova a Rimini.</p>
                     </div>
                 </div>
             </div>
         </div>
 
+ <div class="col-12 col-md-6 col-lg-4">
+            <div class="project-card">
+                <img src="img/foto-video.jpg" alt="fotografia e video" class="img-fluid">
+                <div class="project-overlay">
+                    <div class="project-text">
+                        <h3>Fotografia e videodocumentari</h3>
+                        <h2>2016</h2>
+                        <p>Cortometraggio sul racconto generazionale.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+     <div class="col-12 col-md-6 col-lg-4">
+            <div class="project-card">
+                <img src="img/cappello.jpg" alt="prodotto" class="img-fluid">
+                <div class="project-overlay">
+                    <div class="project-text">
+                        <h3>Prodotto</h3>
+                        <h2>Visiting</h2>
+                        <p>Copricapo realizzato durante la settimana di visiting con il professore Reinhard Plank.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+         <div class="col-12 col-md-6 col-lg-4">
+            <div class="project-card">
+                <img src="img/geometria.jpg" alt="geometria" class="img-fluid">
+                <div class="project-overlay">
+                    <div class="project-text">
+                        <h3>Geometria</h3>
+                        <h2>Tassellazioni</h2>
+                        <p>Progetto d’esame, tassellazioni 3D realizzata con la tecnica dei pyssla.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="project-card">
+                <img src="img/Utopia_def.JPG" alt="comunicazione 2" class="img-fluid">
+                <div class="project-overlay">
+                    <div class="project-text">
+                        <h3>Comunicazione 2</h3>
+                        <h2>Utopia</h2>
+                        <p>Realizzazione di un manifesto che rappresentasse la parola Utopia nel territorio.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+            <div class="col-12 col-md-6 col-lg-4">
+            <div class="project-card">  
+                <img src="img/workshop.jpg" alt="comunicazione 2 visiting" class="img-fluid">
+                <div class="project-overlay">
+                    <div class="project-text">
+                        <h3>Comunicazione 2</h3>
+                        <h2>Visiting</h2>
+                        <p>Creazione di un manifesto attraverso un carattere tipografico.</p>
+                    </div>
+                </div>
+            </div>
+            </div>
 
-
-
+ </div>
 
     <!-- qui si inserisce il codice JavaScript -->
 <script>
-    // Seleziona gli elementi
+
+// Seleziona gli elementi
 const btnMenu = document.querySelector('.btn-menu');
 const btnClose = document.querySelector('.btn-close');
 const mobileNavWrapper = document.querySelector('.mobile-nav-wrapper');
@@ -205,49 +274,82 @@ btnClose.addEventListener('click', () => {
   mobileNavWrapper.classList.remove('show');
 });
 
-// Rimuovi la classe .show quando si clicca su .mobile-nav-wrapper (ma non sui link)
+// Rimuovi la classe .show quando si clicca su un link del menu mobile
+const mobileNavLinks = mobileNavWrapper.querySelectorAll('.nav-link');
+mobileNavLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileNavWrapper.classList.remove('show');
+  });
+});
+
+// Rimuovi la classe .show quando si clicca sul wrapper
 mobileNavWrapper.addEventListener('click', (e) => {
-  // Controlla se il click è stato fatto direttamente sul wrapper e non su un link
   if (e.target === mobileNavWrapper) {
     mobileNavWrapper.classList.remove('show');
   }
 });
 
+// Funzione per aggiornare il link attivo
+function updateActiveLink() {
+  const sections = document.querySelectorAll('.section');
+  const navLinks = document.querySelectorAll('.nav-link');
   
+  let currentSection = '';
+  
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 150;
+    const sectionHeight = section.offsetHeight;
+    
+    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+      currentSection = section.getAttribute('id');
+    }
+  });
+  
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + currentSection) {
+      link.classList.add('active');
+    }
+  });
+}
 
-  let current = 0;
-        const slides = document.getElementById('slides');
-        const total = document.querySelectorAll('.slide').length;
-        const dotsDiv = document.getElementById('dots');
+// Aggiungi l'event listener per lo scroll
+window.addEventListener('scroll', updateActiveLink);
+window.addEventListener('load', updateActiveLink);
 
-        // Crea pallini
-        for (let i = 0; i < total; i++) {
-            const dot = document.createElement('span');
-            dot.className = 'dot' + (i === 0 ? ' active' : '');
-            dot.onclick = () => goTo(i);
-            dotsDiv.appendChild(dot);
-        }
+// Carousel
+let current = 0;
+const slides = document.getElementById('slides');
+const total = document.querySelectorAll('.slide').length;
+const dotsDiv = document.getElementById('dots');
 
-        function update() {
-            slides.style.transform = `translateX(-${current * 100}%)`;
-            document.querySelectorAll('.dot').forEach((d, i) => {
-                d.className = i === current ? 'dot active' : 'dot';
-            });
-        }
+for (let i = 0; i < total; i++) {
+    const dot = document.createElement('span');
+    dot.className = 'dot' + (i === 0 ? ' active' : '');
+    dot.onclick = () => goTo(i);
+    dotsDiv.appendChild(dot);
+}
 
-        function move(dir) {
-            current += dir;
-            if (current < 0) current = total - 1;
-            if (current >= total) current = 0;
-            update();
-        }
+function update() {
+    slides.style.transform = `translateX(-${current * 100}%)`;
+    document.querySelectorAll('.dot').forEach((d, i) => {
+        d.className = i === current ? 'dot active' : 'dot';
+    });
+}
 
-        function goTo(i) {
-            current = i;
-            update();
-        }
+function move(dir) {
+    current += dir;
+    if (current < 0) current = total - 1;
+    if (current >= total) current = 0;
+    update();
+}
 
-        setInterval(() => move(1), 5000);
+function goTo(i) {
+    current = i;
+    update();
+}
+
+setInterval(() => move(1), 5000);
 </script>
 
 </body>
