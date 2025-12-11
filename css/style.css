@@ -388,6 +388,12 @@ h4{
     text-align: center;
     line-height: 25px;
   }
+  font-1{
+   font-size: 18px;
+    line-height: 20px;
+    width: 100%;
+    margin: 0 auto;  
+    }
 }
 @media (max-width: 1024px) {
             .gallery {
