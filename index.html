@@ -58,8 +58,8 @@
                       </li>
                 </ul> 
         </div>
-    </div>
-</div>
+
+
 
 <!-- prima riga-->
         <div class="row justify-content-center">
@@ -173,7 +173,7 @@ Parallelamente agli studi universitari, svolgo attività lavorativa come hostess
             <div class="col-8  bg-progetti section" id="progetti">
                 <h4 class=" text-center color-black"> PROGETTI UNIVERSITARI </h4>
             </div>
-</div>
+        </div>
  <div class="row g-4 mb-5">
 
  <div class=" col-md-6 col-lg-4">
@@ -254,7 +254,55 @@ Parallelamente agli studi universitari, svolgo attività lavorativa come hostess
             </div>
             </div>
 
- </div>
+           
+            <div class="col-12 col-md-6 col-lg-4">
+            <div class="project-card">  
+                <img src="img/digitale3D.png" alt="Digitale 3D" class="img-fluid">
+                <div class="project-overlay">
+                    <div class="project-text">
+                        <h3>Digitale 3D</h3>
+                        <h2>Protezione sportiva</h2>
+                        <p>Creazione di una protezione sportiva completamente personalizzata, progettata specificamente per il taekwondo femminile.</p>
+                    </div>
+                </div>
+            </div>
+            </div>  
+            
+              <div class="col-12 col-md-6 col-lg-4">
+            <div class="project-card">  
+                <img src="img/modellistica.jpg" alt="Modellistica" class="img-fluid">
+                <div class="project-overlay">
+                    <div class="project-text">
+                        <h3>Modellistica</h3>
+                        <h2>Labirinto</h2>
+                        <p>Creazione di un labirinto 3D utilizzando tecniche di modellazione avanzate.</p>
+                    </div>
+                </div>
+            </div>
+            </div> 
+
+                   <div class="col-12 col-md-6 col-lg-4">
+            <div class="project-card">  
+                <img src="img/prodotto.jpg" alt="Modellistica" class="img-fluid">
+                <div class="project-overlay">
+                    <div class="project-text">
+                        <h3>Prodotto</h3>
+                        <h2>Texture con il cartone</h2>
+                        <p>Creazione di texture utilizzando il cartone come materiale principale.</p>
+                    </div>
+                </div>
+            </div>
+            </div> 
+            
+
+    </div>
+</div>
+
+
+<!-- footer-->
+
+
+
 
     <!-- qui si inserisce il codice JavaScript -->
 <script>
@@ -350,7 +398,27 @@ function goTo(i) {
 }
 
 setInterval(() => move(1), 5000);
+
+
+const modal = document.getElementById("modalForm");
+const openBtn = document.getElementById("openForm");
+const closeBtn = document.getElementById("closeForm");
+
+openBtn.addEventListener("click", () => {
+    modal.classList.add("show");
+});
+
+closeBtn.addEventListener("click", () => {
+    modal.classList.remove("show");
+});
+
+modal.addEventListener("click", (e) => {
+    if(e.target === modal) modal.classList.remove("show");
+});
+
+
 </script>
+
 
 </body>
 </html>

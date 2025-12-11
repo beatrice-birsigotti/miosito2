@@ -1,8 +1,10 @@
 /* syle.css figma */
 html, body{
-     font: normal 16px/24px raleway ;
+     font: normal 16px/24px 'Raleway', sans-serif;
      margin: 0;
      padding: 0;
+     width: 100%;
+     overflow-x: hidden;
 }
 
 .container-fluid{
@@ -82,7 +84,6 @@ position: fixed;
     background-color: #fc6a65;
     padding:50px;
     width: 100%;
-    position: fixed;
 }
 .bg-titolo{
     background-color: #333333;
@@ -374,6 +375,9 @@ h4{
 }
 
 
+/* footer */
+
+
 
 /* Mobile */
 @media (max-width: 375px) {
@@ -425,12 +429,12 @@ h4{
     padding-top: 33%;
     justify-content: center;
     align-items: flex-start;
-    display: none;
-
-       opacity: 0;
+    opacity: 0;
     transform: translateX(100%);
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     pointer-events: none;
+    max-width: 100vw;
+    overflow: hidden;
 }
 
 .mobile-nav-wrapper.show{
@@ -476,7 +480,34 @@ cursor: default;
     pointer-events: auto;
 }
 
+
 /* Media query per mobile */
+@media(max-width:768px){
+    .fixed-header{
+        padding: 10px 15px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        height: auto;
+    }
+
+    .logo{
+    position: static;
+    margin: 0 ;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    line-height: 1;
+    font-size: 26px;
+    }
+    .btn-menu{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
 @media (max-width: 768px) {
     .slide img {
         height: 300px;
@@ -496,20 +527,48 @@ cursor: default;
     }
 }
 
-@media (max-width: 576px) {
-    .slide img {
+@media (max-width: 768px){
+    .slide img{
         height: 300px;
     }
-    
-    .caption {
-        padding: 15px;
+
+    .caption h2{
+        font-size: 20px;
     }
-    
-    .caption h2 {
+    .caption p{
+        font-size: 14px;
+    }
+
+    .btnslide{
+        width: 36px;
+        height: 36px;
         font-size: 18px;
     }
-    
-    .caption p {
-        font-size: 12px;
-    }
 }
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  
+  h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+ h4{
+    font-size: 30px;
+    line-height: 36px;
+  }
+ }
+  .font-1{
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .bg-titolo{
+    padding: 80px 20px;
+  }
