@@ -49,7 +49,6 @@ html, body{
     justify-content: left;
     /* justify-content: flex-start; */
     align-items: left;
-    position: fixed;
 }
 
 /* Items della navigazione */
@@ -94,16 +93,11 @@ html, body{
     margin-top: 90px;
 
 }
-.bg-monumenti{
-    background-color: #cacaca;
-       padding: 80px;
-      width: 100%; 
-}
-
-.bg-progetti{
-    background-color: #f5f5f5;
-       padding: 80px;
-      width: 100%;
+.bg-sezioni{
+    background-color: #f0f0f0;
+    padding: 130px;
+    width: 100%;
+    margin: 0;
 }
 
 /*colori testo*/
@@ -146,7 +140,7 @@ h4{
    font-size:25px;
     line-height: 30px;
     width: 100%;
-    margin: 0 auto;  
+    margin-top: 10px;
 }
 
 
@@ -201,7 +195,7 @@ h4{
             height: 250px;
             object-fit: cover;
             transition: transform 0.3s ease;
-            cursor: pointer;
+            cursor: normal;
         }
 
         .card:hover .card-image {
@@ -297,8 +291,9 @@ h4{
 
 .dots {
     text-align: center;
-    margin-top: 20px;
-    padding: 20px 0;
+    margin-top:-30px;
+    padding-top: 0;
+    padding-bottom: 20px;
 }
 
 .dot {
@@ -323,6 +318,7 @@ h4{
     cursor: pointer;
     height: 350px;
     margin-bottom: 20px;
+
 }
 
 .project-card img {
@@ -527,6 +523,9 @@ h4{
     width: 100%;
     margin: 0 auto;  
     }
+    .bg-sezioni{
+        padding: 80px;
+    }
 }
 @media (max-width: 1024px) {
             .gallery {
@@ -540,10 +539,58 @@ h4{
             }
         }
 
+/* ===== TESTI OVERLAY PROGETTI RESPONSIVE (SENZA TOGLIERE STILE) ===== */
 
+.project-card .project-text{
+  max-width: 100%;
+  padding: 0 12px;
+  text-align: center;
+}
 
+/* Titoli: manteniamo margini e sottolineatura */
+.project-card .project-text h2,
+.project-card .project-text h3{
+  width: auto;                 /* evita overflow */
+  line-height: 1.15;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
 
+/* Titolo grande */
+.project-card .project-text h2{
+  font-size: clamp(25px, 6vw, 20px);   /* si restringe bene */
+  margin-bottom: 16px;                 /* SPAZIO SOTTO */
+}
 
+/* Titolo piccolo sopra */
+.project-card .project-text h3{
+  font-size: clamp(14px, 3.5vw, 20px);
+  margin-bottom: 12px;
+}
+
+/* Descrizione */
+.project-card .project-text p{
+  font-size: clamp(13px, 3.2vw, 16px);
+  line-height: 1.4;
+  margin-top: 14px;                    /* SPAZIO SOPRA */
+  overflow-wrap: anywhere;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  z-index: 99999; /* sopra TUTTO */
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+}
 
 /* navigazione mobile */
 .mobile-nav-wrapper{
