@@ -21,13 +21,15 @@ html, body{
     max-width: 1200px;
 }
 
-.logo{
-font-size: 30px;
-font-weight: 35px;
-position: fixed;
+.logo-img {
+    max-height: 60px;          /* il logo cresce FINO a qui */
+    width: auto;
+    object-fit: contain;
 }
+
  .fixed-header {
     position: fixed;
+    height: 100px;
     top: 0;
     left: 0;
     right: 0;
@@ -87,9 +89,9 @@ position: fixed;
 }
 .bg-titolo{
     background-color: #333333;
-    padding: 130px;
+    padding: 200px;
     width: 100%;
-    margin-top: 74px;
+    margin-top: 90px;
 
 }
 .bg-monumenti{
@@ -107,6 +109,9 @@ position: fixed;
 /*colori testo*/
 .color-white{
     color: #fff; 
+}
+.color-black{
+    color: #000; 
 }
 
 /* stili testi*/
@@ -365,7 +370,7 @@ h4{
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 15px;
-    color: white;
+    color: #fff;
 }
 
 .project-text p {
@@ -375,9 +380,133 @@ h4{
 }
 
 
-/* footer */
+/* FOOTER 3 COLONNE */
+.footer-3col {
+    padding: 60px 40px;
+    color: white;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* COLONNE */
+.footer-col {
+    flex: 1;
+}
+
+.footer-col h4 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* FORM */
+.footer-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-form input,
+.footer-form textarea {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+}
+
+.footer-form button {
+    width: 120px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.footer-form button:hover {
+    background: black;
+}
+
+/* SOCIAL */
+.footer-social{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-social a{
+    color: #000;
+    font-size: 18px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* utile se metti anche l’icona */
+}
+
+.footer-social a:hover {
+    text-decoration: underline;
+}
 
 
+/* MENU */
+.footer-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-menu li {
+    margin-bottom: 8px;
+}
+
+.footer-menu a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-menu a:hover {
+    text-decoration: underline;
+}
+
+/* Normative in basso a sinistra */
+.footer-legal {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    right: 30px;
+
+    display: flex;
+    justify-content: space-between; /* ← chiave */
+    align-items: center;
+
+    font-size: 12px;
+    color: #000 !important;
+}
+/* Logo BB */
+.footer-logo {
+    font-size: 50px;          /* LOGO PIÙ GRANDE */
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1;
+    padding: 6px 10px;
+    position: static !important;
+}
+/* Assicura il posizionamento corretto */
+.footer-3col {
+    position: relative;
+}
+/* MOBILE */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
 
 /* Mobile */
 @media (max-width: 375px) {
