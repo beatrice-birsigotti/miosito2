@@ -82,12 +82,13 @@
 </div>
 
 <!-- terza riga -->
+<!-- terza riga -->
 <div class="row align-items-center section" id="origini">
-      <div class="col-md-4 offset-md-1 mb-3 px-0">
+      <div class="col-md-4 offset-md-1 mb-3 px-0 order-2 order-md-1">
         <h2> ORIGINI </h2>
     <p class="font-1"> Pesaro offre un paesaggio di contrasti morbidi: da un lato l'Adriatico con la sua linea orizzontale infinita, spiagge ampie e il ritmo costante delle onde; dall'altro le colline marchigiane che si sollevano dolcemente verso l'entroterra, creando un dialogo tra mare e terra. </p>
     </div>
-    <div class="col-md-6 offset-md-1 mb-0 px-0">    
+    <div class="col-md-6 offset-md-1 mb-0 px-0 order-1 order-md-2">    
         <img src="img/pesaro.webp" class="img-fluid" alt="foto pesaro">
     </div>
 </div>
@@ -508,7 +509,22 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+// Animazione scroll immagini monumenti - solo mobile
+if (window.innerWidth <= 768) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
 
+  document.querySelectorAll('.card-image').forEach(img => {
+    observer.observe(img);
+  });
+}
 
 
 

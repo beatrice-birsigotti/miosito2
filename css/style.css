@@ -788,6 +788,7 @@ cursor: default;
 
     .caption h2{
         font-size: 20px;
+        
     }
     .caption p{
         font-size: 14px;
@@ -808,6 +809,7 @@ cursor: default;
   h2 {
     font-size: 28px;
     line-height: 36px;
+    padding-top: 20px;
   }
 
   h3 {
@@ -836,10 +838,27 @@ cursor: default;
     padding-left: 25px;
     padding-right: 25px;
   }
-  
+  .section p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
   /* Padding per il testo sotto il carosello */
   .box-testo {
     padding-left: 25px;
     padding-right: 25px;
+  }
+}
+
+/* Animazione scroll per immagini monumenti - solo mobile */
+@media (max-width: 768px) {
+  .card-image {
+    transform: scale(0.95);
+    box-shadow: none;
+    transition: all 0.6s ease;
+  }
+  
+  .card-image.visible {
+    transform: scale(1);
+    box-shadow: 0 8px 20px rgba(107, 30, 46, 0.4);
   }
 }
